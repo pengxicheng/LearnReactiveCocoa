@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="1371" y="475"/>
         </scene>
-        <!--View Controller-->
+        <!--CocoaVC-->
         <scene sceneID="Xk6-Dq-bch">
             <objects>
-                <viewController id="uVc-KJ-eMz" sceneMemberID="viewController">
+                <viewController id="uVc-KJ-eMz" customClass="CocoaVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cCc-GY-iCb"/>
                         <viewControllerLayoutGuide type="bottom" id="pIy-9F-QrD"/>
@@ -61,12 +61,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9qF-vk-WUj">
-                                <rect key="frame" x="119" y="163" width="240" height="128"/>
-                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JX4-LC-F3a">
+                                <rect key="frame" x="193" y="146" width="154" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XhE-uh-aa1">
+                                <rect key="frame" x="193" y="207" width="154" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yck-pQ-63S">
+                                <rect key="frame" x="193" y="278" width="154" height="30"/>
+                                <state key="normal" title="Login"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="Yck-pQ-63S" id="Z1s-Rg-gxM"/>
+                        <outlet property="nameLabel" destination="JX4-LC-F3a" id="p5x-O3-7kf"/>
+                        <outlet property="passwordLabel" destination="XhE-uh-aa1" id="Cgv-X6-BPI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJB-mX-voY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
